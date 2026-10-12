@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0937 066 1788 | soft58</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: "Vazirmatn", Tahoma, sans-serif; background: #f5f6f8; color: #222; }
+        a { text-decoration: none; color: inherit; }
+        .container { width: 1200px; max-width: 94%; margin: auto; }
+
+        /* ---------- هدر ---------- */
+        .hero {
+            height: 240px; position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(255,255,255,.25), transparent 25%),
+                radial-gradient(circle at 85% 80%, rgba(255,255,255,.15), transparent 30%),
+                linear-gradient(135deg, #ff9800, #ff6d00, #f4511e);
+            box-shadow: 0 15px 40px rgba(244,81,30,.25);
+        }
+        .circle { position: absolute; border-radius: 50%; background: rgba(255,255,255,.10); animation: moveCircle 10s ease-in-out infinite; }
+        .circle-1 { width: 220px; height: 220px; left: -70px; top: -90px; }
+        .circle-2 { width: 320px; height: 320px; right: -120px; bottom: -150px; animation-delay: .5s; }
+        .circle-3 { width: 90px; height: 90px; left: 30%; top: 20px; animation-delay: .5s; }
+        .circle-4 { width: 130px; height: 130px; right: 25%; top: 170px; animation-delay: .5s; }
+        @keyframes moveCircle {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(20deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        .hero-content { position: relative; z-index: 5; text-align: center; color: white; animation: heroShow .3s ease; }
+        @keyframes heroShow {
+            from { opacity: 0; transform: translateY(50px) scale(.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .hero-title { font-size: 44px; font-weight: 900; line-height: 1.2; text-shadow: 0 5px 20px rgba(0,0,0,.20); animation: titleAnimation 2s ease; }
+        .hero-english {
+            margin-top: 5px; font-family: Arial, Helvetica, sans-serif; direction: ltr;
+            font-size: 84px; font-weight: 900; line-height: 1.1; letter-spacing: 6px; color: #fff;
+            text-shadow: 0 4px 10px rgba(0,0,0,.15), 0 10px 30px rgba(0,0,0,.20), 0 0 20px rgba(255,255,255,.12);
+            animation: englishAnimation 1.5s ease;
+        }
+        @keyframes titleAnimation {
+            0% { opacity: 0; transform: scale(.7); }
+            70% { transform: scale(1.08); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes englishAnimation {
+            from { opacity: 0; letter-spacing: 25px; transform: scale(.8); }
+            to { opacity: 1; letter-spacing: 6px; transform: scale(1); }
+        }
+        .hero-line { width: 130px; height: 4px; margin: 14px auto 0; border-radius: 10px; background: #fff; box-shadow: 0 0 15px rgba(255,255,255,.5); animation: lineAnimation 1.5s ease; }
+        @keyframes lineAnimation { from { width: 0; } to { width: 130px; } }
+
+
+        /* ---------- اسلایدر انیمیشنی سمت چپ هدر (300×200) ---------- */
+        .hero-slider {
+            position: absolute; left: 60px; top: 50%; transform: translateY(-50%);
+            width: 300px; height: 200px; z-index: 6; border-radius: 22px; overflow: hidden;
+            border: 3px solid rgba(255,255,255,.65);
+            background: linear-gradient(135deg, rgba(255,255,255,.28), rgba(255,255,255,.10));
+            box-shadow: 0 22px 45px -10px rgba(120,30,0,.55), 0 0 0 8px rgba(255,255,255,.12);
+            animation: sliderIn .9s cubic-bezier(.2,.8,.2,1) both;
+        }
+        @keyframes sliderIn {
+            from { opacity: 0; transform: translateY(-50%) translateX(-60px) scale(.9) rotate(-3deg); }
+            to   { opacity: 1; transform: translateY(-50%) translateX(0) scale(1) rotate(0); }
+        }
+        .hero-slider .ph {
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,.75); font-size: 42px;
+        }
+        .hero-slider .hero-video {
+            position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+        }
+        /* برق نور روی قاب */
+        .hero-slider::after {
+            content: ""; position: absolute; top: 0; bottom: 0; width: 60px; left: -100px;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent);
+            transform: skewX(-20deg); animation: shine 4s ease-in-out infinite; pointer-events: none; z-index: 3;
+        }
+        @keyframes shine { 0%, 60% { left: -100px; } 100% { left: 360px; } }
+        /* ردّ نور و جرقه روی فیلم */
+        .hero-slider::before {
+            content: ""; position: absolute; inset: -20%; z-index: 2; pointer-events: none;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 40%);
+            mix-blend-mode: screen; animation: glare 6s ease-in-out infinite;
+        }
+        @keyframes glare {
+            0%,100% { transform: translate(-25%, -25%); opacity: .35; }
+            50%     { transform: translate(45%, 40%);  opacity: .9; }
+        }
+        .hero-slider .spark {
+            position: absolute; z-index: 4; width: 16px; height: 16px; background: #fff; pointer-events: none;
+            clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+            filter: drop-shadow(0 0 6px rgba(255,255,255,.95)); opacity: 0; animation: twinkle 2.6s ease-in-out infinite;
+        }
+        .spark.sp1 { top: 14%; right: 14%; }
+        .spark.sp2 { top: 62%; right: 76%; width: 12px; height: 12px; animation-delay: .8s; }
+        .spark.sp3 { top: 30%; right: 52%; width: 10px; height: 10px; animation-delay: 1.5s; }
+        .spark.sp4 { top: 78%; right: 22%; width: 14px; height: 14px; animation-delay: 2.1s; }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); }
+            50%      { opacity: 1; transform: scale(1.15) rotate(90deg); }
+        }
+        @media (max-width: 1100px) { .hero-slider { left: 20px; width: 240px; height: 160px; } }
+        @media (max-width: 900px)  { .hero-slider { display: none; } }
+
+
+        /* ---------- کادر متن انیمیشنی سمت راست هدر ---------- */
+        .hero-note {
+            position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+            width: 300px; height: 200px; z-index: 6; border-radius: 22px; overflow: hidden;
+            border: 3px solid rgba(255,255,255,.65);
+            background: linear-gradient(135deg, rgba(255,255,255,.28), rgba(255,255,255,.10));
+            box-shadow: 0 22px 45px -10px rgba(120,30,0,.55), 0 0 0 8px rgba(255,255,255,.12);
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; color: #fff;
+            animation: noteIn .9s cubic-bezier(.2,.8,.2,1) both, noteFloat 4s 1s ease-in-out infinite;
+        }
+        @keyframes noteIn {
+            from { opacity: 0; transform: translateY(-50%) translateX(60px) scale(.9) rotate(3deg); }
+            to   { opacity: 1; transform: translateY(-50%) translateX(0) scale(1) rotate(0); }
+        }
+        @keyframes noteFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+        .hero-note::after {
+            content: ""; position: absolute; top: 0; bottom: 0; width: 60px; left: -100px;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent);
+            transform: skewX(-20deg); animation: shine 5s ease-in-out infinite; pointer-events: none;
+        }
+        .hn-icon {
+            width: 40px; height: 40px; border-radius: 13px; display: flex; align-items: center; justify-content: center; font-size: 19px;
+            background: rgba(255,255,255,.95); color: #f4511e; box-shadow: 0 8px 18px rgba(120,30,0,.3);
+            animation: statPulse 2s ease-in-out infinite;
+        }
+        .hn-line { display: flex; gap: 8px; justify-content: center; font-weight: 900; line-height: 1.25; text-shadow: 0 4px 14px rgba(0,0,0,.25); }
+        .hn-line1 { font-size: 27px; }
+        .hn-line2 { font-size: 44px; }
+        .hn-line2 span {
+            background: linear-gradient(90deg, #fff, #ffe680, #fff, #ffe680); background-size: 300% 100%;
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+            filter: drop-shadow(0 4px 10px rgba(120,30,0,.35));
+        }
+        .hn-line span { display: inline-block; animation: wordCycle 8s ease-in-out infinite both; }
+        .hn-line2 span { animation: wordCycle 8s ease-in-out infinite both, textShimmer 3s linear infinite; }
+        .hn-line span:nth-child(1) { animation-delay: .2s; }
+        .hn-line span:nth-child(2) { animation-delay: .4s; }
+        .hn-line span:nth-child(3) { animation-delay: .6s; }
+        .hn-line2 span:nth-child(1) { animation-delay: .9s, 0s; }
+        .hn-line2 span:nth-child(2) { animation-delay: 1.15s, 0s; }
+        @keyframes wordCycle {
+            0%   { opacity: 0; transform: translateY(26px) scale(.7); filter: blur(8px); }
+            9%   { opacity: 1; transform: translateY(0) scale(1.08); filter: blur(0); }
+            13%  { transform: translateY(0) scale(1); }
+            84%  { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+            94%  { opacity: 0; transform: translateY(-20px) scale(.9); filter: blur(6px); }
+            100% { opacity: 0; transform: translateY(-20px) scale(.9); filter: blur(6px); }
+        }
+        @keyframes textShimmer { from { background-position: 0% 0; } to { background-position: 300% 0; } }
+        .hn-bar { width: 90px; height: 4px; border-radius: 10px; background: #fff; box-shadow: 0 0 14px rgba(255,255,255,.7); animation: hnBar 8s ease-in-out infinite; }
+        @keyframes hnBar { 0%,10% { width: 0; } 30%,84% { width: 90px; } 94%,100% { width: 0; } }
+        @media (max-width: 1100px) {
+            .hero-note { right: 20px; width: 240px; height: 160px; }
+            .hn-icon { width: 32px; height: 32px; font-size: 15px; }
+            .hn-line1 { font-size: 21px; } .hn-line2 { font-size: 34px; }
+        }
+        @media (max-width: 900px) { .hero-note { display: none; } }
+
+        /* ---------- ساعت و تاریخ ---------- */
+        .datetime-bar { display: flex; justify-content: center; }
+        .hero-datetime {
+            position: relative; top: -26px; z-index: 6; display: inline-flex; align-items: center; gap: 16px;
+            padding: 14px 34px; border-radius: 999px; background: #fff;
+            box-shadow: 0 14px 30px -8px rgba(244,81,30,.35), 0 2px 6px rgba(0,0,0,.06);
+            color: #d9480f; font-size: 19px; font-weight: 700;
+        }
+        .hero-datetime .dt-chip { display: inline-flex; align-items: center; gap: 9px; }
+        .hero-datetime .dt-chip i {
+            width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; background: linear-gradient(135deg, #ff9800, #f4511e); color: #fff; font-size: 13px;
+        }
+        .hero-datetime .dt-sep { width: 1px; height: 22px; background: #f0d9c8; }
+        .hero-datetime .dt-time { font-variant-numeric: tabular-nums; direction: ltr; color: #171717; }
+
+        /* ---------- چیدمان: سایدبار راست + محتوا ---------- */
+        .layout {
+            display: grid;
+            grid-template-columns: 340px 1fr;   /* در RTL ستون اول سمت راست است */
+            gap: 28px;
+            align-items: start;
+            padding: 20px 0 50px;
+        }
+
+        /* ---------- سایدبار نرم‌افزارها ---------- */
+        .sidebar {
+            position: sticky; top: 20px;
+            background: #fff; border-radius: 26px; padding: 22px 18px 18px;
+            box-shadow: 0 15px 45px rgba(0,0,0,.08);
+        }
+        .sidebar-head { display: flex; align-items: center; gap: 12px; padding: 0 6px 16px; margin-bottom: 8px; border-bottom: 1px solid #f0f0f2; }
+        .sidebar-head .sh-icon {
+            width: 44px; height: 44px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 19px; background: linear-gradient(135deg, #ff9800, #f4511e);
+            box-shadow: 0 8px 18px rgba(244,81,30,.28);
+        }
+        .sidebar-head h2 { font-size: 18px; font-weight: 800; }
+        .sidebar-head p { font-size: 12px; color: #8a8a93; margin-top: 2px; }
+
+        .app-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .app-item {
+            display: flex; align-items: center; gap: 12px; padding: 10px 10px;
+            border-radius: 16px; border: 1px solid transparent;
+            transition: background .25s ease, border-color .25s ease, transform .25s ease;
+        }
+        .app-item:hover { background: #fff6ef; border-color: #ffe0cc; transform: translateX(-4px); }
+        .app-icon {
+            flex: 0 0 46px; width: 46px; height: 46px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center; font-size: 21px; color: #fff;
+        }
+        .app-info { flex: 1; min-width: 0; }
+        .app-info h3 { font-size: 15px; font-weight: 700; color: #171717; }
+        .app-info p { font-size: 12px; color: #8a8a93; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .app-go {
+            flex: 0 0 32px; width: 32px; height: 32px; border-radius: 10px; background: #f3f4f6; color: #ff6d00;
+            display: flex; align-items: center; justify-content: center; font-size: 13px; transition: .25s ease;
+        }
+        .app-item:hover .app-go { background: linear-gradient(135deg, #ff9800, #f4511e); color: #fff; }
+
+        .c-chrome { background: linear-gradient(135deg, #4285f4, #34a853); }
+        .c-vlc    { background: linear-gradient(135deg, #ff8800, #e65100); }
+        .c-7zip   { background: linear-gradient(135deg, #2b2b2b, #5c5c66); }
+        .c-winrar { background: linear-gradient(135deg, #8e24aa, #5e35b1); }
+        .c-npp    { background: linear-gradient(135deg, #7cb342, #33691e); }
+        .c-vscode { background: linear-gradient(135deg, #1e88e5, #0d47a1); }
+        .c-tg     { background: linear-gradient(135deg, #0088cc, #229ed9); }
+        .c-any    { background: linear-gradient(135deg, #ef5350, #c62828); }
+        .c-idm    { background: linear-gradient(135deg, #43a047, #1b5e20); }
+        .c-obs    { background: linear-gradient(135deg, #455a64, #263238); }
+
+        /* ---------- کارت نرم‌افزار ---------- */
+        .software-card { background: #fff; padding: 25px; border-radius: 25px; box-shadow: 0 15px 45px rgba(0,0,0,.08); transition: .4s ease; text-align: center; }
+        .software-card:hover { transform: translateY(-8px); box-shadow: 0 25px 60px rgba(0,0,0,.13); }
+        .software-card img { width: 100%; height: auto; border-radius: 20px; display: block; }
+        .download-area { padding-top: 25px; }
+        .download-text { font-size: 20px; font-weight: 800; margin-bottom: 15px; }
+        .download-button {
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+            padding: 15px 40px; border-radius: 15px; color: #fff; font-size: 17px; font-weight: 700;
+            background: linear-gradient(135deg, #ff9800, #f4511e);
+            box-shadow: 0 10px 25px rgba(244,81,30,.25); transition: .3s ease;
+        }
+        .download-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+        .download-button:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 35px rgba(244,81,30,.35); }
+        .download-button i { font-size: 20px; }
+
+        /* ---------- ارتباط با ما (کم‌ارتفاع) ---------- */
+        .contact-section { padding: 0 0 40px; }
+        .contact-container { background: #171717; border-radius: 22px; padding: 18px 24px; color: #fff; box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+        .contact-heading { text-align: center; margin-bottom: 14px; }
+        .contact-heading h2 { font-size: 20px; font-weight: 800; margin-bottom: 2px; }
+        .contact-heading p { color: #999; font-size: 12px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .contact-link {
+            min-height: 106px; border-radius: 16px; display: flex; flex-direction: row;
+            align-items: center; justify-content: center; gap: 12px; padding: 8px 14px;
+            color: #fff; transition: .3s ease;
+        }
+        .contact-link:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+        /* عرض کادرها ۳۰٪ کمتر */
+        .contact-link { width: 70%; justify-self: center; }
+        .telegram { background: linear-gradient(135deg, #0088cc, #229ed9); }
+        .whatsapp { background: linear-gradient(135deg, #128c7e, #25d366); }
+        .phone { background: linear-gradient(135deg, #ff9800, #f4511e); }
+        .contact-icon {
+            flex: 0 0 40px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+            border-radius: 12px; background: rgba(255,255,255,.18); font-size: 20px;
+        }
+        .contact-text { display: flex; flex-direction: column; line-height: 1.3; }
+        .contact-link h3 { font-size: 16px; margin: 0; }
+        .contact-link { cursor: pointer; }
+        .contact-link span { font-family: Arial, sans-serif; direction: ltr; font-size: 12px; opacity: .9; text-align: right; }
+
+        /* ---------- دو تصویر زیر دکمه دانلود ---------- */
+        .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+        .gallery-item {
+            aspect-ratio: 32 / 25; border-radius: 18px; overflow: hidden; position: relative;
+            background: #f0f1f4; border: 2px dashed #d9dbe2;
+            display: flex; align-items: center; justify-content: center; color: #b4b7c2; font-size: 34px;
+        }
+        .gallery-item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+
+        footer { background: #101010; color: #777; text-align: center; padding: 25px; font-size: 13px; }
+        footer strong { color: #ff9800; }
+
+
+        /* ---------- آمار دانلود (سمت چپ) ---------- */
+                .stat-card {
+            position: relative; overflow: hidden; border-radius: 26px; padding: 26px 18px 22px; text-align: center; color: #fff;
+            background: linear-gradient(145deg, #1f1f27, #2b1a14 60%, #4a1d0d);
+            box-shadow: 0 20px 45px rgba(244,81,30,.28), inset 0 0 0 1px rgba(255,255,255,.08);
+            animation: statFloat 4s ease-in-out infinite;
+        }
+        .stat-card.pass { animation-delay: 1.2s; background: linear-gradient(145deg, #1f1f27, #14262b 60%, #0d3a4a); box-shadow: 0 20px 45px rgba(0,136,204,.28), inset 0 0 0 1px rgba(255,255,255,.08); }
+        @keyframes statFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .stat-card::before {
+            content: ""; position: absolute; width: 180px; height: 180px; border-radius: 50%; top: -70px; right: -60px;
+            background: radial-gradient(circle, rgba(255,152,0,.55), transparent 70%); animation: statGlow 3s ease-in-out infinite;
+        }
+        .stat-card.pass::before { background: radial-gradient(circle, rgba(34,158,217,.55), transparent 70%); }
+        @keyframes statGlow { 0%,100% { transform: scale(1); opacity: .7; } 50% { transform: scale(1.3); opacity: 1; } }
+        .stat-card::after {
+            content: ""; position: absolute; top: 0; bottom: 0; width: 50px; left: -80px;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent);
+            transform: skewX(-20deg); animation: statShine 4.5s ease-in-out infinite;
+        }
+        @keyframes statShine { 0%, 55% { left: -80px; } 100% { left: 300px; } }
+        .stat-icon {
+            position: relative; z-index: 1; width: 62px; height: 62px; margin: 0 auto 12px; border-radius: 20px;
+            display: flex; align-items: center; justify-content: center; font-size: 28px;
+            background: linear-gradient(135deg, #ff9800, #f4511e); box-shadow: 0 10px 24px rgba(244,81,30,.45);
+            animation: statPulse 2s ease-in-out infinite;
+        }
+        .stat-card.pass .stat-icon { background: linear-gradient(135deg, #229ed9, #0088cc); box-shadow: 0 10px 24px rgba(0,136,204,.45); }
+        @keyframes statPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12) rotate(-4deg); } }
+        .stat-number {
+            position: relative; z-index: 1; font-size: 54px; font-weight: 900; line-height: 1.15;
+            font-variant-numeric: tabular-nums; text-shadow: 0 4px 18px rgba(255,152,0,.55);
+        }
+        .stat-card.pass .stat-number { text-shadow: 0 4px 18px rgba(34,158,217,.6); }
+        .stat-number.bump { animation: numBump .6s ease; }
+        @keyframes numBump { 0% { transform: scale(1); } 40% { transform: scale(1.25); } 100% { transform: scale(1); } }
+        .stat-label { position: relative; z-index: 1; font-size: 15px; font-weight: 700; opacity: .92; margin-top: 4px; }
+        .stat-sub { position: relative; z-index: 1; font-size: 12px; opacity: .6; margin-top: 2px; }
+
+
+        /* ---------- قفل طلایی ---------- */
+        .gold-lock {
+            position: fixed; left: 20px; bottom: 20px; z-index: 900; width: 50px; height: 50px; padding: 0; border: 0;
+            background: transparent; cursor: pointer; border-radius: 14px;
+            animation: lockFloat 3s ease-in-out infinite, lockGlow 2.4s ease-in-out infinite;
+            transition: transform .3s ease;
+        }
+        .gold-lock svg { display: block; width: 50px; height: 50px; }
+        .gold-lock:hover { transform: scale(1.18) rotate(-6deg); animation-play-state: paused; }
+        @keyframes lockFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+        @keyframes lockGlow {
+            0%,100% { filter: drop-shadow(0 4px 8px rgba(0,0,0,.35)) drop-shadow(0 0 4px rgba(255,200,40,.5)); }
+            50%     { filter: drop-shadow(0 4px 8px rgba(0,0,0,.35)) drop-shadow(0 0 14px rgba(255,200,40,.95)); }
+        }
+        .lock-box {
+            height: auto !important; min-height: 320px; overflow-y: auto; justify-content: flex-start;
+            background: radial-gradient(circle at 20% 10%, rgba(255,215,90,.25), transparent 40%), linear-gradient(145deg, #1c1a14, #2b2410 60%, #4a3608);
+            box-shadow: 0 40px 90px rgba(0,0,0,.55), 0 0 0 2px rgba(255,200,40,.45), 0 0 40px rgba(255,190,30,.25);
+        }
+        .lock-icon {
+            width: 76px; height: 76px; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #3a2600;
+            background: linear-gradient(135deg, #fff3b0, #ffd54a 40%, #d99a00); box-shadow: 0 10px 28px rgba(255,190,30,.45);
+            animation: statPulse 2s ease-in-out infinite;
+        }
+        .lock-title { font-size: 20px; font-weight: 800; color: #ffe08a; }
+        .lock-form { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; }
+        .lock-input {
+            width: 100%; max-width: 260px; padding: 13px 16px; border-radius: 14px; border: 2px solid rgba(255,200,40,.5);
+            background: rgba(255,255,255,.08); color: #fff; font-family: Arial, sans-serif; font-size: 22px; letter-spacing: 6px; text-align: center; direction: ltr; outline: none;
+            transition: .25s ease;
+        }
+        .lock-input:focus { border-color: #ffd54a; box-shadow: 0 0 0 4px rgba(255,200,40,.2); }
+        .lock-input.shake { animation: lockShake .45s ease; border-color: #ff5252; }
+        @keyframes lockShake { 0%,100% { transform: translateX(0); } 20%,60% { transform: translateX(-9px); } 40%,80% { transform: translateX(9px); } }
+        .lock-error { min-height: 20px; font-size: 13px; color: #ff8a80; }
+        .lock-submit { background: linear-gradient(135deg, #fff3b0, #ffd54a 40%, #d99a00) !important; color: #3a2600 !important; }
+        .lock-stats { display: none; flex-direction: column; gap: 16px; width: 100%; }
+        .lock-box.unlocked .lock-form, .lock-box.unlocked .lock-hint { display: none; }
+        .lock-box.unlocked .lock-stats { display: flex; }
+        .lock-hint { font-size: 13px; opacity: .65; }
+        .lock-box .stat-card { animation: none; }
+        .lock-box .stat-number { font-size: 46px; }
+
+        /* ---------- پنجره‌ی تماس (400×500) ---------- */
+        .call-overlay {
+            position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+            background: rgba(10,10,14,.65); backdrop-filter: blur(6px);
+            opacity: 0; visibility: hidden; transition: opacity .35s ease, visibility .35s ease;
+        }
+        .call-overlay.open { opacity: 1; visibility: visible; }
+        .call-box {
+            position: relative; width: 400px; height: 500px; max-width: 92vw; max-height: 90vh; overflow: hidden;
+            border-radius: 30px; color: #fff; text-align: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 30px;
+            background:
+                radial-gradient(circle at 20% 15%, rgba(255,255,255,.25), transparent 35%),
+                linear-gradient(145deg, #ff9800, #ff6d00, #f4511e);
+            box-shadow: 0 40px 90px rgba(0,0,0,.5), 0 0 0 8px rgba(255,255,255,.12);
+            transform: scale(.3) rotate(-8deg); opacity: 0;
+            transition: transform .6s cubic-bezier(.2,1.3,.3,1), opacity .4s ease;
+        }
+        .call-overlay.open .call-box { transform: scale(1) rotate(0); opacity: 1; }
+        .call-close {
+            position: absolute; top: 16px; left: 16px; width: 38px; height: 38px; border: 0; border-radius: 50%; cursor: pointer;
+            background: rgba(255,255,255,.25); color: #fff; font-size: 18px; transition: .25s ease;
+        }
+        .call-close:hover { background: rgba(255,255,255,.45); transform: rotate(90deg); }
+        .call-ring {
+            position: relative; width: 110px; height: 110px; border-radius: 50%; background: #fff; color: #f4511e;
+            display: flex; align-items: center; justify-content: center; font-size: 46px; box-shadow: 0 14px 34px rgba(0,0,0,.25);
+        }
+        .call-ring i { animation: phoneShake 1.4s ease-in-out infinite; }
+        .call-ring::before, .call-ring::after {
+            content: ""; position: absolute; inset: 0; border-radius: 50%; border: 3px solid rgba(255,255,255,.8);
+            animation: ringWave 2s ease-out infinite;
+        }
+        .call-ring::after { animation-delay: 1s; }
+        @keyframes ringWave { from { transform: scale(1); opacity: .9; } to { transform: scale(1.9); opacity: 0; } }
+        @keyframes phoneShake {
+            0%, 60%, 100% { transform: rotate(0); }
+            10% { transform: rotate(-18deg); } 20% { transform: rotate(18deg); }
+            30% { transform: rotate(-14deg); } 40% { transform: rotate(14deg); } 50% { transform: rotate(-6deg); }
+        }
+        .call-title { font-size: 22px; font-weight: 800; opacity: 0; transform: translateY(20px); }
+        .call-number {
+            font-family: Arial, Helvetica, sans-serif; direction: ltr; font-size: 44px; font-weight: 900; letter-spacing: 2px;
+            text-shadow: 0 5px 18px rgba(0,0,0,.3); opacity: 0; transform: translateY(20px) scale(.8);
+        }
+        .call-overlay.open .call-title { animation: callUp .6s .35s ease forwards; }
+        .call-overlay.open .call-number { animation: callNum .8s .55s cubic-bezier(.2,1.4,.3,1) forwards, numGlow 2.4s 1.4s ease-in-out infinite; }
+        @keyframes callUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes callNum { to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes numGlow { 0%,100% { text-shadow: 0 5px 18px rgba(0,0,0,.3); } 50% { text-shadow: 0 0 26px rgba(255,255,255,.9); } }
+        .call-actions { display: flex; gap: 12px; opacity: 0; transform: translateY(20px); }
+        .call-overlay.open .call-actions { animation: callUp .6s .8s ease forwards; }
+        .call-btn {
+            display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 14px; border: 0; cursor: pointer;
+            font-family: inherit; font-size: 15px; font-weight: 700; transition: .25s ease;
+        }
+        .call-btn.primary { background: #fff; color: #f4511e; }
+        .call-btn.ghost { background: rgba(255,255,255,.22); color: #fff; }
+        .call-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.25); }
+
+        /* ---------- ریسپانسیو ---------- */
+        @media (max-width: 980px) {
+            .layout { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+        @media (max-width: 850px) {
+            .hero-title { font-size: 34px; }
+            .hero-english { font-size: 54px; letter-spacing: 3px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-link { width: 100%; }
+            .stat-number { font-size: 44px; }
+        }
+        @media (max-width: 500px) {
+            .hero { height: 230px; }
+            .hero-title { font-size: 28px; }
+            .hero-english { font-size: 40px; letter-spacing: 2px; }
+            .hero-datetime { font-size: 14px; padding: 10px 18px; gap: 10px; top: -20px; }
+            .hero-datetime .dt-chip i { width: 24px; height: 24px; font-size: 11px; }
+            .software-card { padding: 12px; }
+            .download-button { width: 100%; }
+            .gallery { gap: 8px; }
+            .call-number { font-size: 34px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+
+        <div class="hero-slider" aria-hidden="true">
+            <div class="ph"><i class="fa-solid fa-film"></i></div>
+            <video class="hero-video" src="images/9.mp4" width="300" height="200" autoplay muted loop playsinline preload="auto" onerror="this.style.display='none'"></video>
+            <span class="spark sp1"></span>
+            <span class="spark sp2"></span>
+            <span class="spark sp3"></span>
+            <span class="spark sp4"></span>
+        </div>
+
+        <div class="hero-note" aria-label="مدیریت و پیگیری آسان چک">
+            <div class="hn-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+            <div class="hn-line hn-line1"><span>مدیریت</span><span>و</span><span>پیگیری</span></div>
+            <div class="hn-line hn-line2"><span>آسان</span><span>چک</span></div>
+            <div class="hn-bar"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-title">سافت ۵۸</div>
+            <div class="hero-english">soft58</div>
+            <div class="hero-line"></div>
+        </div>
+    </header>
+
+    <div class="datetime-bar">
+        <div class="hero-datetime" id="heroDateTime">
+            <span class="dt-chip"><i class="fa-regular fa-calendar"></i><span class="dt-date" id="dtDate">—</span></span>
+            <span class="dt-sep"></span>
+            <span class="dt-chip"><i class="fa-regular fa-clock"></i><span class="dt-time" id="dtTime">—</span></span>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <div class="layout">
+
+            <!-- سایدبار سمت راست: ۱۰ نرم‌افزار کاربردی -->
+            <aside class="sidebar" aria-label="نرم‌افزارهای کاربردی">
+                <div class="sidebar-head">
+                    <div class="sh-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div>
+                        <h2>دانلود نرم‌افزارهای کاربردی</h2>
+                        <p>۱۰ برنامه‌ی پرکاربرد برای ویندوز</p>
+                    </div>
+                </div>
+
+                <ul class="app-list">
+                    <li><a class="app-item" href="https://www.google.com/chrome/" target="_blank" rel="noopener">
+                        <span class="app-icon c-chrome"><i class="fa-brands fa-chrome"></i></span>
+                        <span class="app-info"><h3>Google Chrome</h3><p>مرورگر سریع و امن</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://www.videolan.org/vlc/" target="_blank" rel="noopener">
+                        <span class="app-icon c-vlc"><i class="fa-solid fa-play"></i></span>
+                        <span class="app-info"><h3>VLC Media Player</h3><p>پخش همه‌ی فرمت‌های ویدیو و صدا</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://www.7-zip.org/" target="_blank" rel="noopener">
+                        <span class="app-icon c-7zip"><i class="fa-solid fa-file-zipper"></i></span>
+                        <span class="app-info"><h3>7-Zip</h3><p>فشرده‌سازی و استخراج فایل</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://www.win-rar.com/" target="_blank" rel="noopener">
+                        <span class="app-icon c-winrar"><i class="fa-solid fa-box-archive"></i></span>
+                        <span class="app-info"><h3>WinRAR</h3><p>مدیریت فایل‌های آرشیو</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">
+                        <span class="app-icon c-npp"><i class="fa-solid fa-file-lines"></i></span>
+                        <span class="app-info"><h3>Notepad++</h3><p>ویرایشگر متن و کد سبک</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+                        <span class="app-icon c-vscode"><i class="fa-solid fa-code"></i></span>
+                        <span class="app-info"><h3>Visual Studio Code</h3><p>محیط برنامه‌نویسی مدرن</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://desktop.telegram.org/" target="_blank" rel="noopener">
+                        <span class="app-icon c-tg"><i class="fa-brands fa-telegram"></i></span>
+                        <span class="app-info"><h3>Telegram Desktop</h3><p>پیام‌رسان نسخه‌ی کامپیوتر</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://anydesk.com/" target="_blank" rel="noopener">
+                        <span class="app-icon c-any"><i class="fa-solid fa-desktop"></i></span>
+                        <span class="app-info"><h3>AnyDesk</h3><p>اتصال و کنترل از راه دور</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://www.internetdownloadmanager.com/" target="_blank" rel="noopener">
+                        <span class="app-icon c-idm"><i class="fa-solid fa-download"></i></span>
+                        <span class="app-info"><h3>Internet Download Manager</h3><p>دانلود سریع و ادامه‌ی دانلود</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+
+                    <li><a class="app-item" href="https://obsproject.com/" target="_blank" rel="noopener">
+                        <span class="app-icon c-obs"><i class="fa-solid fa-video"></i></span>
+                        <span class="app-info"><h3>OBS Studio</h3><p>ضبط و پخش زنده‌ی صفحه</p></span>
+                        <span class="app-go"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </a></li>
+                </ul>
+            </aside>
+
+            <!-- محتوای اصلی -->
+            <section class="software-section">
+                <div class="software-card">
+                    <img src="images/1.jpg" width="1046" height="500" alt="soft58"/>
+                    <div class="download-area">
+                        <div class="download-text">دانلود نرم افزار</div>
+                        <div class="download-buttons">
+                            <a href="https://drive.google.com/uc?export=download&id=1zy8xdthDbJuLio4wKyPgQoS6KHKjPH6P&confirm=t" class="download-button" rel="noopener" data-counter="check">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                دانلود مدیریت چک
+                            </a>
+                            <a href="https://drive.google.com/uc?export=download&id=1iJOum2vuCFovnXQVCu0zw9sPErv0iE_0&confirm=t" class="download-button" rel="noopener" data-counter="password">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                دانلود پسورد
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <i class="fa-regular fa-image"></i>
+                            <img src="images/2.jpg" alt="" onerror="this.style.display='none'">
+                        </div>
+                        <div class="gallery-item">
+                            <i class="fa-regular fa-image"></i>
+                            <img src="images/3.jpg" alt="" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-heading">
+                    <h2>ارتباط با ما</h2>
+                    <p>از طریق راه‌های زیر با soft58 در ارتباط باشید</p>
+                </div>
+
+                <div class="contact-grid">
+                    <a href="https://t.me/Mehr1Soft" target="_blank" class="contact-link telegram">
+                        <div class="contact-icon"><i class="fa-brands fa-telegram"></i></div>
+                        <div class="contact-text"><h3>تلگرام</h3><span>@Mehr1Soft</span></div>
+                    </a>
+
+                    <a href="https://wa.me/989370661788" target="_blank" class="contact-link whatsapp">
+                        <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="contact-text"><h3>واتساپ</h3><span>0937 066 1788</span></div>
+                    </a>
+
+                    <a href="tel:+989370661788" class="contact-link phone" id="callOpen">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-text"><h3>تماس با ما</h3><span>09370661788</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 <strong>soft58</strong> - تمامی حقوق محفوظ است.
+    </footer>
+
+    <button class="gold-lock" id="lockOpen" type="button" aria-label="قفل طلایی">
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff6c2"/>
+                    <stop offset=".35" stop-color="#ffd54a"/>
+                    <stop offset=".7" stop-color="#d99a00"/>
+                    <stop offset="1" stop-color="#8a5a00"/>
+                </linearGradient>
+                <linearGradient id="gShackle" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#b87800"/>
+                    <stop offset=".5" stop-color="#ffe680"/>
+                    <stop offset="1" stop-color="#b87800"/>
+                </linearGradient>
+            </defs>
+            <path d="M14 23 V15 A11 11 0 0 1 36 15 V23" fill="none" stroke="url(#gShackle)" stroke-width="5" stroke-linecap="round"/>
+            <rect x="7" y="21" width="36" height="26" rx="7" fill="url(#gGold)" stroke="#8a5a00" stroke-width="1.2"/>
+            <rect x="10" y="24" width="30" height="4" rx="2" fill="#fff" opacity=".4"/>
+            <circle cx="25" cy="33" r="4" fill="#4a2f00"/>
+            <rect x="23.6" y="34" width="2.8" height="8" rx="1.4" fill="#4a2f00"/>
+        </svg>
+    </button>
+
+    <div class="call-overlay" id="lockOverlay" aria-hidden="true">
+        <div class="call-box lock-box" id="lockBox" role="dialog" aria-modal="true" aria-label="بخش محافظت‌شده">
+            <button class="call-close" id="lockClose" aria-label="بستن"><i class="fa-solid fa-xmark"></i></button>
+            <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="lock-title">بخش محافظت‌شده</div>
+            <div class="lock-hint">برای مشاهده، رمز را وارد کنید</div>
+            <form class="lock-form" id="lockForm" autocomplete="off">
+                <input class="lock-input" id="lockInput" type="password" inputmode="numeric" maxlength="12" placeholder="••••••" aria-label="رمز">
+                <div class="lock-error" id="lockError"></div>
+                <button class="call-btn primary lock-submit" type="submit"><i class="fa-solid fa-unlock"></i> باز کردن</button>
+            </form>
+            <div class="lock-stats" id="lockStats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div class="stat-number" id="cnt-check" data-key="check">۰</div>
+                    <div class="stat-label">دانلود مدیریت چک</div>
+                    <div class="stat-sub">تعداد کل دانلودها</div>
+                </div>
+                <div class="stat-card pass">
+                    <div class="stat-icon"><i class="fa-solid fa-key"></i></div>
+                    <div class="stat-number" id="cnt-password" data-key="password">۰</div>
+                    <div class="stat-label">دانلود پسورد</div>
+                    <div class="stat-sub">تعداد کل دانلودها</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="call-overlay" id="callOverlay" aria-hidden="true">
+        <div class="call-box" role="dialog" aria-modal="true" aria-label="تماس با ما">
+            <button class="call-close" id="callClose" aria-label="بستن"><i class="fa-solid fa-xmark"></i></button>
+            <div class="call-ring"><i class="fa-solid fa-phone"></i></div>
+            <div class="call-title">با ما تماس بگیرید</div>
+            <div class="call-number">09370661788</div>
+            <div class="call-actions">
+                <a class="call-btn primary" href="tel:+989370661788"><i class="fa-solid fa-phone-volume"></i> تماس</a>
+                <button class="call-btn ghost" id="callCopy" type="button"><i class="fa-regular fa-copy"></i> <span>کپی شماره</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            function updateDateTime() {
+                try {
+                    var now = new Date();
+                    var dateStr = new Intl.DateTimeFormat('fa-IR-u-ca-persian', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(now);
+                    var timeStr = new Intl.DateTimeFormat('fa-IR', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).format(now);
+                    var dateEl = document.getElementById('dtDate');
+                    var timeEl = document.getElementById('dtTime');
+                    if (dateEl) dateEl.textContent = dateStr;
+                    if (timeEl) timeEl.textContent = timeStr;
+                } catch (e) {
+                    var wrap = document.getElementById('heroDateTime');
+                    if (wrap) wrap.style.display = 'none';
+                }
+            }
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        })();
+    </script>
+
+    <script>
+        /* ---------- شمارنده‌ی دانلود + قفل طلایی ----------
+           شمارش با سرویس رایگان counterapi.dev انجام می‌شود؛
+           اعداد فقط بعد از وارد کردن رمز نمایش داده می‌شوند. */
+        (function () {
+            var NS = 'soft58-site';
+            var PASS = '30785';
+            var API = 'https://api.counterapi.dev/v1/' + NS + '/';
+            var unlocked = false;
+            var fa = function (n) { return String(n).replace(/\d/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'[d]; }); };
+            var fmt = function (n) { return fa(Number(n).toLocaleString('en-US')); };
+            var latin = function (v) {
+                return v.replace(/[۰-۹]/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d); })
+                        .replace(/[٠-٩]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.indexOf(d); }).trim();
+            };
+
+            function animateTo(el, target) {
+                var t0 = performance.now(), dur = 1400;
+                function step(t) {
+                    var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+                    el.textContent = fmt(Math.round(target * e));
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+            function loadCounts() {
+                document.querySelectorAll('.stat-number').forEach(function (el) {
+                    fetch(API + el.dataset.key).then(function (r) { return r.json(); })
+                        .then(function (d) { animateTo(el, Number(d.count) || 0); })
+                        .catch(function () { el.textContent = fmt(0); });
+                });
+            }
+
+            /* شمارش دانلودها (بی‌صدا، بدون نمایش) */
+            document.querySelectorAll('[data-counter]').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    fetch(API + a.dataset.counter + '/up', { keepalive: true }).catch(function () {});
+                });
+            });
+
+            /* قفل */
+            var ov = document.getElementById('lockOverlay'), box = document.getElementById('lockBox');
+            var input = document.getElementById('lockInput'), err = document.getElementById('lockError');
+            function show() { ov.classList.add('open'); ov.setAttribute('aria-hidden', 'false'); if (!unlocked) setTimeout(function () { input.focus(); }, 500); }
+            function relock() {
+                if (ov.classList.contains('open')) return;
+                unlocked = false; box.classList.remove('unlocked');
+                err.textContent = ''; input.value = '';
+                document.querySelectorAll('.stat-number').forEach(function (el) { el.textContent = fmt(0); });
+            }
+            function hide() { ov.classList.remove('open'); ov.setAttribute('aria-hidden', 'true'); if (unlocked) setTimeout(relock, 500); }
+            document.getElementById('lockOpen').addEventListener('click', show);
+            document.getElementById('lockClose').addEventListener('click', hide);
+            ov.addEventListener('click', function (e) { if (e.target === ov) hide(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+
+            document.getElementById('lockForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (latin(input.value) === PASS) {
+                    unlocked = true; err.textContent = ''; input.value = '';
+                    box.classList.add('unlocked');
+                    loadCounts();
+                } else {
+                    err.textContent = 'رمز اشتباه است';
+                    input.classList.remove('shake'); void input.offsetWidth; input.classList.add('shake');
+                    input.select();
+                }
+            });
+        })();
+
+        /* ---------- پنجره‌ی تماس ---------- */
+        (function () {
+            var ov = document.getElementById('callOverlay');
+            var open = document.getElementById('callOpen');
+            var close = document.getElementById('callClose');
+            var copy = document.getElementById('callCopy');
+            function show(e) { if (e) e.preventDefault(); ov.classList.add('open'); ov.setAttribute('aria-hidden', 'false'); }
+            function hide() { ov.classList.remove('open'); ov.setAttribute('aria-hidden', 'true'); }
+            open.addEventListener('click', show);
+            close.addEventListener('click', hide);
+            ov.addEventListener('click', function (e) { if (e.target === ov) hide(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+            copy.addEventListener('click', function () {
+                var label = copy.querySelector('span');
+                function done() { label.textContent = 'کپی شد ✓'; setTimeout(function () { label.textContent = 'کپی شماره'; }, 1800); }
+                if (navigator.clipboard) navigator.clipboard.writeText('09370661788').then(done, done); else done();
+            });
+        })();
+    </script>
+
+</body>
+</html>
